@@ -1,0 +1,22 @@
+.home{
+  padding-top: 5rem;
+  background-color: #6c757d;
+  color: aliceblue;
+}
+
+#Contact{
+  background-color: var(--bs-body-color);
+  color: white;
+}
+
+.bi{
+  color: black;
+}
+
+section{
+  padding-top: 4rem;
+}
+
+.navbar-nav{
+  margin-left: 42rem;
+}
