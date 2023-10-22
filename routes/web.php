@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NavController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,6 @@ Route::get('/contact', [NavController::class,'Contact'])->name("contact");
 
 Route::post('/daftar', [NavController::class,'daftar'])->name("proses_daftar");
 
+
+Route::get('/post', [PostController::class,'post'])->name("post");
+Route::resource('post', PostController::class);

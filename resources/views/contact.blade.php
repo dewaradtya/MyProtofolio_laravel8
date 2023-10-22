@@ -19,26 +19,29 @@
                     <div class="mb-4">
                         <label for="name" class="form-label">Name:</label>
                         <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Enter your name" aria-label="Masukkan Nama" value="{{ old('name') }}">
+                        @error('name')
+                        <div class="invalid-feedback">{{$message}}</div>
+                        @enderror
                     </div>
-                    @error('name')
-                    <div class="invalid-feedback">{{$message}}</div>
-                    @enderror
+                    
 
                     <div class="mb-4">
                         <label for="umur" class="form-label">Age:</label>
                         <input type="text" name="umur" class="form-control @error('umur') is-invalid @enderror" id="umur" placeholder="Enter your age" value="{{ old('umur') }}">
+                        @error('umur')
+                        <div class="invalid-feedback">{{$message}}</div>
+                        @enderror
                     </div>
-                    @error('umur')
-                    <div class="invalid-feedback">{{$message}}</div>
-                    @enderror
+                    
 
                     <div class="mb-4">
                         <label for="alamat">Address:</label>
                         <textarea class="form-control @error('alamat') is-invalid @enderror" name="alamat" placeholder="Enter your address" id="alamat" style="height: 100px;" ></textarea>
+                        @error('alamat')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
-                    @error('alamat')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                    
 
 
                     <button type="submit" class="btn btn-info">Send</button>

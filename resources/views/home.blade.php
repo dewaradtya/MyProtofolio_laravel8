@@ -6,7 +6,7 @@
 <section class="home text-center" data-aos="fade-up"
      data-aos-duration="2000">
     <img src="{{ asset('img/pp.jpeg') }}" alt="Dewa Raditya R" width="200" class="rounded-circle img-thumbnail">
-    <h2 class="display-4">Dewa Raditya</h2>
+    <h2 class="display-4"><span id="typing-text" data-type-text="">Dewa Raditya</span></h2>
     <p class="lead">Student | Atlet</p>
     <div class="row justify-content-center fs-4 text-center">
         <div class="col-md-5">

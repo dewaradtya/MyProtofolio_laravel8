@@ -4,7 +4,7 @@
 
 @section('isi')
 <div class="alert alert-primary" role="alert">
-    Hasil
+    Hasil <br>
     nama : {{$data['name']}} <br>
     umur : {{$data['umur']}} <br>
     alamat : {{$data['alamat']}} <br>
