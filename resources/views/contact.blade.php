@@ -35,8 +35,8 @@
                     
 
                     <div class="mb-4">
-                        <label for="alamat">Address:</label>
-                        <textarea class="form-control @error('alamat') is-invalid @enderror" name="alamat" placeholder="Enter your address" id="alamat" style="height: 100px;" ></textarea>
+                        <label for="alamat">Comment:</label>
+                        <textarea class="form-control @error('alamat') is-invalid @enderror" name="alamat" placeholder="Enter your comment" id="alamat" style="height: 100px;" ></textarea>
                         @error('alamat')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror

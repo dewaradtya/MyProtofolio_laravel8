@@ -121,11 +121,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     
     <script>
-      /*!
-      * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
-      * Copyright 2011-2023 The Bootstrap Authors
-      * Licensed under the Creative Commons Attribution 3.0 Unported License.
-       */
+      // Mode
 
       (() => {
       'use strict'
@@ -199,6 +195,28 @@
             })
           })
       })
+
+      // Efek mengetik
+      function typeWriter(text, element, delay) {
+      let i = 0;
+      function type() {
+          if (i < text.length) {
+              element.innerHTML += text.charAt(i);
+              i++;
+              setTimeout(type, delay);
+          }
+      }
+      type();
+      }
+
+      const typingElement = document.getElementById("typing-text");
+
+      const textToType = typingElement.getAttribute("data-type-text");
+
+      const delay = 100;
+
+      typeWriter(textToType, typingElement, delay);
+
     })()
 
     </script>
