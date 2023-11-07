@@ -14,7 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = Post::all();
+        // return $contacts;
+        return view('post.index', ['contacts' => $contacts]);
     }
 
     /**
@@ -36,16 +38,18 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|unique:posts|max:150',
-            'body' => 'required',
+            'name' => 'required',
+            'umur' => 'required',
+            'alamat' => 'required',
         ]);
 
-        $input = $request->all();
+        $contact = new Post();
+        $contact->name = $request->input('name');
+        $contact->umur = $request->input('umur');
+        $contact->alamat = $request->input('alamat');
+        $contact->save();
 
-        $post = Post::create($input);
-        
-        return back()->with('success',' Post baru berhasil
-        dibuat.');
+        return view('hasil',["data"=>$request])->with('success', 'Contact has been created successfully');
     }
 
     /**
@@ -56,7 +60,10 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $contact = Post::find($id);
+        return view('post.show', ['contact' => $contact]);
+        
     }
 
     /**
@@ -67,7 +74,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contact = Post::find($id);
+        return view('post.edit', ['contact' => $contact]);
+    
     }
 
     /**
@@ -79,7 +88,19 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'umur' => 'required',
+            'alamat' => 'required',
+        ]);
+    
+        $contact = Post::find($id);
+        $contact->name = $request->input('name');
+        $contact->umur = $request->input('umur');
+        $contact->alamat = $request->input('alamat');
+        $contact->save();
+    
+        return redirect()->route('contacts.index')->with('success', 'Contact has been updated successfully');
     }
 
     /**
@@ -90,6 +111,9 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contact = Post::find($id);
+        $contact->delete();
+
+        return redirect()->route('contacts.index')->with('success', 'Contact has been deleted successfully');
     }
 }

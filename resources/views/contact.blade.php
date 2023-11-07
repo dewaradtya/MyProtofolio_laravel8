@@ -4,17 +4,15 @@
 
 @section('isi')
 <section id="Contact">
-  <div class="container" data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+  <div class="container" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
     <div class="row mb-4">
       <div class="col-md-8">
         <h2>Contact me</h2>
       </div>
     </div>
         <div class="row">
-            <div class="col-md-6"> <!-- Kolom pertama untuk formulir -->
-                <form action="{{ route('proses_daftar') }}" method="post">
+            <div class="col-md-6">
+                <form action="{{ route('contacts.store') }}" method="post">
                     @csrf
                     <div class="mb-4">
                         <label for="name" class="form-label">Name:</label>
@@ -42,8 +40,6 @@
                         @enderror
                     </div>
                     
-
-
                     <button type="submit" class="btn btn-info">Send</button>
                 </form>
             </div>

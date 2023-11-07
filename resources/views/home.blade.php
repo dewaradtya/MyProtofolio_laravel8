@@ -3,8 +3,7 @@
 @section('judul')
 
 @section('isi')
-<section class="home text-center" data-aos="fade-up"
-     data-aos-duration="2000">
+<section id="home" class="text-center" data-aos="fade-up" data-aos-duration="2000">
     <img src="{{ asset('img/pp.jpeg') }}" alt="Dewa Raditya R" width="200" class="rounded-circle img-thumbnail">
     <h2 class="display-4 mt-3"><span id="typing-text" data-type-text="Dewa Raditya"></span></h2>
     <p class="lead">Student | Atlet</p>

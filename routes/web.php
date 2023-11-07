@@ -25,5 +25,5 @@ Route::get('/contact', [NavController::class,'Contact'])->name("contact");
 Route::post('/daftar', [NavController::class,'daftar'])->name("proses_daftar");
 
 
-Route::get('/post', [PostController::class,'post'])->name("post");
-Route::resource('post', PostController::class);
+Route::get('/post/index', [PostController::class,'index'])->name("post/index");
+Route::resource('contacts', PostController::class);

@@ -46,6 +46,9 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('contact') }}">Contact</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('post/index') }}">Laporan</a>
+        </li>
         <li class="nav-item dropdown">
           <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>

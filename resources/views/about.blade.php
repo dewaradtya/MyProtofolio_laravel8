@@ -48,7 +48,7 @@
 
 <section id="Project">
   <div class="container" data-aos="fade-up" data-aos-duration="3000">
-    <div class="row text-center mb-">
+    <div class="row text-center mb-1">
       <div class="col">
         <h2>My Project</h2>
         <p>Here are the projects I've completed.</p>
