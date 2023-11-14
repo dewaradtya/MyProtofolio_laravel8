@@ -10,6 +10,6 @@
             <p>Comment: {{ $contact->alamat }}</p>
         </div>
     </div>
-    <a href="{{ route('contacts.index') }}" class="btn btn-primary my-3">Back to Contacts</a>
+    <a href="{{ route('contacts.index') }}" class="btn btn-primary my-3"><strong>Back to Report</strong></a>
 </div>
 @endsection
