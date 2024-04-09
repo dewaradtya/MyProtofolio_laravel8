@@ -16,27 +16,27 @@
           <p>Hi, I'm Dewa Raditya Rochman and I reside in Pasuruan Regency. I'm a student at SMKN 1 Purwosari school.</p>
          <div class="row gx-1" style="background-color : var(--bs-body-bg);">
            <div class="col-3">
-              <a class="bi bi-instagram" href="https://instagram.com/dewaradtya?igshid=ZDdkNTZiNTM=">
+              <a class="bi bi-instagram" target="_blank" href="https://instagram.com/dewaradtya?igshid=ZDdkNTZiNTM=">
               </a>
            </div>
           
            <div class="col-3" style="background-color : var(--bs-body-bg);">
              <div class="card-body">
-                <a class="bi bi-whatsapp" href="https://wa.me/">
+                <a class="bi bi-whatsapp" target="_blank" href="https://wa.me/081332611178">
                 </a>
              </div>
            </div>
            
            <div class="col-3" style="background-color : var(--bs-body-bg);">
              <div class="card-body">
-                <a class="bi bi-spotify" href="https://spotify.link/w9eb1FVgPyb">
+                <a class="bi bi-spotify" target="_blank" href="https://spotify.link/w9eb1FVgPyb">
                 </a>
              </div>
            </div>
            
            <div class="col-3" style="background-color : var(--bs-body-bg);">
              <div class="card-body">
-                <a class="bi bi-github" href="https://github.com/dewaradtya">
+                <a class="bi bi-github" target="_blank" href="https://github.com/dewaradtya">
                 </a>
              </div>
            </div>

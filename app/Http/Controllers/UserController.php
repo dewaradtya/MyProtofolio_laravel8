@@ -33,7 +33,7 @@ class UserController extends Controller
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('signIn/login')->with('success', 'Anda berhasil keluar dari sistem');
+        return redirect()->route('home')->with('success', 'Anda telah berhasil logout dari sistem');
     }
 
     public function register()
@@ -46,7 +46,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:6|confirmed',
         ]);
 
