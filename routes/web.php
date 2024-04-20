@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\NavController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProjekController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,3 +39,5 @@ Route::get("/sample", [UserController::class, "createSample"])->name('createSamp
 
 Route::get('/signIn/register', [UserController::class, "register"])->name('signIn/register');
 Route::post('/do-register', [UserController::class, "doRegister"])->name('doRegister');
+
+Route::resource("projek", ProjekController::class);
