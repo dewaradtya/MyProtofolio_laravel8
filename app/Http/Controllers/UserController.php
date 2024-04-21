@@ -23,7 +23,7 @@ class UserController extends Controller
         if (auth()->attempt($credential)){
             return redirect('/post/index'); 
         }else{
-            return redirect()->route("signIn/login")->with("error", "Email dan password tidak ditemukan di sistem");
+            return redirect()->route("login")->with("error", "Email dan password tidak ditemukan di sistem");
         }
     }
 
@@ -58,7 +58,7 @@ class UserController extends Controller
 
         auth()->login($user);
 
-        return redirect('/signIn/login')->with('success', 'Registration successful. You can now log in.'); 
+        return redirect('/login')->with('success', 'Registration successful. You can now log in.'); 
     }
 
 }

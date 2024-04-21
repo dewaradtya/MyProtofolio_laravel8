@@ -50,9 +50,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('post/index') }}">Report</a>
-                    </li>
+                    @if (Auth::check())
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('post/index') }}">Report</a>
+                        </li>
+                    @endif
                     @guest
                         <!-- Jika pengguna belum login -->
                         <a href="{{ route('signIn/login') }}" class="btn btn-sm btn-outline-primary m-1">Sign In</a>
@@ -122,7 +124,8 @@
                     <h4>Follow More</h4>
                     <ul class="list-unstyled">
                         <li><a href="#" style="color: white; text-decoration:none;">Facebook</a></li>
-                        <li><a href="https://wa.me/081332611178" style="color: white; text-decoration:none;">Whatsapp</a></li>
+                        <li><a href="https://wa.me/081332611178"
+                                style="color: white; text-decoration:none;">Whatsapp</a></li>
                         <li><a href="https://instagram.com/dewaradtya?igshid=ZDdkNTZiNTM="
                                 style="color: white; text-decoration:none;">Instagram</a></li>
                     </ul>

@@ -44,6 +44,7 @@ class ProjekController extends Controller
         $rules = [
             'title' => 'required|string|max:255',
             'content' => 'required|string',
+            'link' => 'required',
             'image' => 'required|image',
         ];
 
@@ -114,7 +115,8 @@ class ProjekController extends Controller
         $rules = [
             'title' => 'required|string|max:255',
             'content' => 'required|string',
-            'file' => 'nullable|image|',
+            'link' => 'required',
+            'image' => 'nullable|image|',
         ];
 
         $validator = Validator::make($request->all(), $rules);

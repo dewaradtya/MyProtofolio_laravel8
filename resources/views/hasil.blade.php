@@ -15,5 +15,4 @@
 </div>
 
 <button type="button" class="btn btn-primary text-white m-5"><a class="text-white" style="text-decoration: none;" href="{{ route('contact') }}">Back</a></button>
-<a href="{{ route('contacts.index') }}" class="btn btn-primary my-3">Report</a>
 @endsection

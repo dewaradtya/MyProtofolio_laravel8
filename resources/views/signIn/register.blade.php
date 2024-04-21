@@ -76,11 +76,6 @@
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" name="password" id="password" required>
-                                @if($errors->has('password'))
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $errors->first('password') }}
-                                    </div>
-                                @endif
                             </div>
                             <div class="form-group">
                                 <label for="password_confirmation">Confirm Password</label>
